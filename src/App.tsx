@@ -8,6 +8,9 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
   * {font-family: 'Montserrat', sans-serif;}
+  .red {color: red;}
+  .bgPrimary {background: blue};
+  .secundary {color: pink};
 `;
 
 const App: React.FC = () => {

@@ -3,30 +3,49 @@ import styled from 'styled-components';
 import {MQ} from '../../config/media';
 
 //Interface
-interface iContainerML {
+interface iContainerML{
     children: any;
+    bgImgM?: string;
+    bgImgD?: string;
 }
-const ContainerCS = styled.div`
-    height: 100%;
-    width: 100%;
+interface iContainerBg {
+    bgImgM?: string;
+    bgImgD?: string;
+}
+const ContainerBg = styled.div`
+    border: 1px solid pink;
+    min-height: auto;
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 10vh 0;
+    background-image: url(${(props: iContainerBg) => props.bgImgM});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @media ${MQ.sm} {
+        min-height: 80vh;
+        background-image: url(${(props: iContainerBg) => props.bgImgD});
+    }
+    
 `;
-const DivChildren = styled.div`
+const SubContainer = styled.div`
     width: 80%;
-    border: 1px solid red;
-    @media ${MQ.lg} {
-        width: 85%;
+    min-height: auto;
+    border: 1px solid blue;
+    @media ${MQ.sm} {
+        min-height: 80vh;
     }
 `;
-
 function ContainerML(props: iContainerML) {
-    const {children} = props;
+    const {children, bgImgM, bgImgD} = props;
     return(
-        <ContainerCS>
-            <DivChildren>{children}</DivChildren>
-        </ContainerCS>
-    )
+        <ContainerBg bgImgM={bgImgM} bgImgD={bgImgD}>
+            <SubContainer>
+                {children}
+            </SubContainer>
+        </ContainerBg>
+    );
 }
 
 export default ContainerML;

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {MQ} from '../../config/media';
 //Components
-import ContainerML from '../layout/container';
+import ContainerHeaderML from '../layout/containerHeader';
 
 //Interface
 interface iNavContainer {
@@ -118,7 +118,7 @@ function NavML1(props: iNavML1) {
     }
     return(
         <NavContainer bgColor={bgColor}>
-            <ContainerML>
+            <ContainerHeaderML>
                 <NavSC >
                     <img src={logoImg} alt="logo"/>
                     {links.length>=0? 
@@ -134,7 +134,7 @@ function NavML1(props: iNavML1) {
                         </SVGUl>
                     :null}
                 </NavSC>
-            </ContainerML>
+            </ContainerHeaderML>
         </NavContainer>
     )
 }

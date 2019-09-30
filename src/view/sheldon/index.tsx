@@ -1,24 +1,22 @@
-import React from 'react';
+import * as React from 'react';
 
-//Components
+//Components 
 import Header from './header';
+import Title1 from './title1';
 import Section from './section';
-import Cards from './cards';
-import Testimonials from './testimonials';
 import Form from './form';
 import Footer from './footer';
 
-function Home() {
+function Sheldon() {
     return(
-        <>
+        <div>
             <Header />
+            <Title1 />
             <Section />
-            <Cards />
-            <Testimonials />
             <Form />
             <Footer />
-        </>
+        </div>
     )
 }
 
-export default Home;
+export default Sheldon;
