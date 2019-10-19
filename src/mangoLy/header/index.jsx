@@ -3,23 +3,12 @@ import styled from 'styled-components';
 import {MQ} from '../../config/media';
 
 //Mango-Library
-import ContainerHeaderML from '../../mangoLy/layout/containerHeader';
-//Interface
-interface iHeaderML1 {
-    children: any;
-    headerImg: string;
-    bgImgM?: string;
-    bgImgD?: string;
-    nav: any;
-}
-interface iBgHeaderSC {
-    bgImgM?: string;
-    bgImgD?: string;
-}
+import ContainerHeaderML from '../layout/containerHeader';
+
 
 //Styled-Components
 const BgHeaderSC = styled.div`
-    background-image: url(${(props: iBgHeaderSC) => props.bgImgM });
+    background-image: url(${(props) => props.bgImgM });
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -31,7 +20,7 @@ const BgHeaderSC = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
     @media ${MQ.sm} {
-        background-image: url(${(props: iBgHeaderSC) => props.bgImgD });
+        background-image: url(${(props) => props.bgImgD });
         height: 510px;
     }
     @media ${MQ.md} {
@@ -49,7 +38,7 @@ const HeaderSC = styled.header`
         height: 100%;
     }
     & > div {
-        border: 1px solid green;
+        /* border: 1px solid green; */
     }
 `;
 const ContainerText = styled.div`
@@ -81,7 +70,7 @@ const ContainerImg = styled.div`
 
 
 
-function HeaderML1(props: iHeaderML1) {
+function Header1(props) {
     const {children, headerImg, bgImgM, bgImgD, nav} = props;
     return(
         <BgHeaderSC bgImgM={bgImgM} bgImgD={bgImgD}>
@@ -99,4 +88,4 @@ function HeaderML1(props: iHeaderML1) {
         </BgHeaderSC>
     )
 }
-export default HeaderML1;
+export default Header1;

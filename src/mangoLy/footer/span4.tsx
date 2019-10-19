@@ -4,7 +4,7 @@ import {MQ} from '../../config/media';
 
 //Styled-Componets
 const Span4SC = styled.div`
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     @media ${MQ.sm} {
         grid-column-start: 4 span;
     }

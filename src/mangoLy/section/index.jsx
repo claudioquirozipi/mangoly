@@ -4,17 +4,6 @@ import {MQ} from '../../config/media';
 
 //Mango-Library
 import ContainerML from '../../mangoLy/layout/container';
-//Interface
-interface iSectionML1 {
-    children: any;
-    img: string;
-    reverse: boolean;
-    bgImgM?: string;
-    bgImgD?: string;
-}
-interface iSectionSC {
-    reverse: boolean;
-}
 
 //Styled-Components
 const SectionSC = styled.section`
@@ -25,28 +14,29 @@ const SectionSC = styled.section`
     @media ${MQ.sm} {
         justify-content: space-between;
         min-height: 80vh;   
-        flex-direction: ${(props: iSectionSC) => props.reverse ? "row-reverse": "row"};
+        flex-direction: ${(props) => props.reverse ? "row-reverse": "row"};
     }
     & > div {
         width: 100%;
-        border: 1px solid red;
+        /* border: 1px solid red; */
         @media ${MQ.sm} {
             width: 50%;
         }
     }
     img {
         width: 100%;
-        border: 1px solid green;
+        /* border: 1px solid green; */
         @media ${MQ.sm} {
             width: 40%;
         }
     }
 `;
 
-function SectionML1(props: iSectionML1) {
-    const {children, img, bgImgM, bgImgD, reverse} = props;
+function Section1(props) {
+    const {children, img, bgImgM, bgImgD, reverse, title} = props;
     return(
         <ContainerML bgImgM={bgImgM} bgImgD={bgImgD}>
+            <div>{title || null}</div>
             <SectionSC reverse={reverse}>
                 <img src={img} alt=""/>
                 <div>
@@ -56,4 +46,4 @@ function SectionML1(props: iSectionML1) {
         </ContainerML>
     )
 }
-export default SectionML1;
+export default Section1;

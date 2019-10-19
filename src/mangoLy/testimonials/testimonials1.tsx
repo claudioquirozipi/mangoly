@@ -29,7 +29,7 @@ const TestimonialsSC = styled.section`
     }
     & > div {
         width: 100%;
-        border: 1px solid red;
+        /* border: 1px solid red; */
         @media ${MQ.sm} {
             width: 50%;
         }
@@ -42,7 +42,7 @@ const ContainerImg = styled.div`
     background: yellow;
     img {
         width: 100%;
-        border: 1px solid green;
+        /* border: 1px solid green; */
         @media ${MQ.sm} {
             width: 60%;
         }

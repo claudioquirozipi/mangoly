@@ -2,18 +2,25 @@ import * as React from 'react';
 
 
 //Mango-Library
-import FormContainerML1 from '../../mangoLy/form/FormContainer1';
+import {
+    ContainerML,
+    FormML,
+    ButtonML
+} from '../../mangoLy';
 
 function Form() {
     return(
-        <FormContainerML1 title="título form">
-            <form>
+        <ContainerML.Form title="título form">
+            <FormML width="100%">
+                <h1>hola</h1> 
                 <h1> formulario</h1>
-                <label htmlFor="">hola</label>                
-                <input type="text"/>
-                <input type="button" value="enviar"/>
-            </form>
-        </FormContainerML1>
+                <label htmlFor="">hola</label>  
+                <FormML.Input1 color="#525f7f">
+                    <input type="text"/>
+                </FormML.Input1>              
+                <ButtonML as="submit">send</ButtonML>
+            </FormML>
+        </ContainerML.Form>
     )
 }
 

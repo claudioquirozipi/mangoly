@@ -25,14 +25,14 @@ const Title = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid yellowgreen;
+    /* border: 1px solid yellowgreen; */
     @media ${MQ.sm} {
         grid-column: 1/6;
         grid-row: 1/2;
     }
 `;
 const Newslater = styled.div`
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     display: flex;
     justify-content: center;
     align-items: center;

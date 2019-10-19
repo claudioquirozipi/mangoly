@@ -14,7 +14,7 @@ const ContainerCS = styled.div`
 `;
 const DivChildren = styled.div`
     width: 80%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     @media ${MQ.lg} {
         width: 85%;
     }
