@@ -1,20 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import {MQ} from '../../config/media';
+import MQ  from '../../config/media';
 
 //Mango-Library
-import ContainerML from '../../mangoLy/layout/container';
-//Interface
-interface iTestimonialsML1 {
-    children: any;
-    img: string;
-    reverse: boolean;
-    bgImgM?: string;
-    bgImgD?: string;
-}
-interface iTestimonialsSC {
-    reverse: boolean;
-}
+import ContainerML from '../layout/container';
 
 //Styled-Components
 const TestimonialsSC = styled.section`
@@ -25,7 +14,7 @@ const TestimonialsSC = styled.section`
     @media ${MQ.sm} {
         justify-content: space-between;
         min-height: 80vh;   
-        flex-direction: ${(props: iTestimonialsSC) => props.reverse ? "row-reverse": "row"};
+        flex-direction: ${(props) => props.reverse ? "row-reverse": "row"};
     }
     & > div {
         width: 100%;
@@ -48,7 +37,7 @@ const ContainerImg = styled.div`
         }
     }
 `;
-function TestimonialsML1(props: iTestimonialsML1) {
+function TestimonialsML1(props) {
     const {children, img, bgImgM, bgImgD, reverse} = props;
     return(
         <ContainerML bgImgM={bgImgM} bgImgD={bgImgD}>

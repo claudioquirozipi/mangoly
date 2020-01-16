@@ -10,28 +10,25 @@ const ContainerFormSC = styled.div`
     justify-content: center;
     align-items: center;
     & > div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        
         width: 100%;
         @media ${MQ.sm} {
-            width: 85%;
-        }
-        @media ${MQ.md} {
             width: ${props => props.width};
         }
-        
     }
 `;
 const ContainerTitleSC = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 50px;
 `; 
-function FormContainer1(props) {
-    const {children, bgImgM, bgImgD, title, width, bgColor} = props;
+function SectionCenter(props) {
+    const {children, bgImgM, bgImgD, title, no100vh, width} = props;
     return(
-        <Container bgImgM={bgImgM} bgImgD={bgImgD} bgColor={bgColor}>
+        <Container bgImgM={bgImgM} bgImgD={bgImgD} no100vh={no100vh}>
             <ContainerTitleSC>{title}</ContainerTitleSC>
-            <ContainerFormSC  width={width||"70%"}>
+            <ContainerFormSC width={width||"70%"}>
                 <div>
                     {children}
                 </div>
@@ -39,4 +36,4 @@ function FormContainer1(props) {
         </Container>
     )
 }
-export default FormContainer1;
+export default SectionCenter;

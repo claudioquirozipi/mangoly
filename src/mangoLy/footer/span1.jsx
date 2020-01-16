@@ -1,16 +1,16 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import {MQ} from '../../config/media';
+import MQ  from '../../config/media';
 
 //Styled-Componets
 const Span2SC = styled.div`
     /* border: 1px solid red; */
-    @media ${MQ.sm} {
-        grid-column-start: 2 span;
+    @media ${MQ.md} {
+        grid-column-start: 1 span;
     }
 `;
 
-function Span2(props: any) {
+function Span1(props) {
     const {children}= props;
     return(
         <Span2SC>
@@ -19,4 +19,4 @@ function Span2(props: any) {
     )
 }
 
-export default Span2;
+export default Span1;

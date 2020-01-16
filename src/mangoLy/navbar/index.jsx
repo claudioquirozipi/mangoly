@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import NavBar2 from './nav2';
+import Mobile1 from './mobile1';
+
 
 //Components
 import ContainerHeaderML from '../layout/containerHeader';
@@ -31,4 +34,6 @@ function NavBar1(props) {
     )
 }
 
+NavBar1.type2 = NavBar2
+NavBar1.Mobile1 = Mobile1;
 export default NavBar1;

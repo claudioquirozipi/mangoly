@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import {MQ} from '../../config/media';
-
+import MQ  from '../../config/media';
+import Header2 from './header2';
 //Mango-Library
 import ContainerHeaderML from '../layout/containerHeader';
 
@@ -88,4 +88,5 @@ function Header1(props) {
         </BgHeaderSC>
     )
 }
+Header1.Center = Header2;
 export default Header1;

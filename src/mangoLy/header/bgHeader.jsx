@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import {MQ} from '../../config/media';
+import MQ  from '../../config/media';
 
 const BgHeaderSC = styled.div`
     background-image: url(${(props) => props.bgImgM });

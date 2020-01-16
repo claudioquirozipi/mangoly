@@ -1,9 +1,9 @@
-import * as React from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import {MQ} from '../../config/media';
+import MQ  from '../../config/media';
 
 const TextContainerSC = styled.div`
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     margin-top: 81px;
     @media ${MQ.sm} {
         margin-top: 0px;
@@ -58,7 +58,7 @@ const TextContainerSC = styled.div`
         }
     }
 `;
-function HeaderTextML1(props: any) {
+function HeaderTextML1(props) {
     const {children} = props;
     return(
         <TextContainerSC>
