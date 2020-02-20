@@ -18,7 +18,7 @@ const FormSC = styled.form`
 
 function Form({ children, width, onSubmit }) {
   return (
-    <FormSC width={width || "100%"} onSubmit={onSubmit || null}>
+    <FormSC width={width || "100%"} onSubmit={onSubmit || (() => {})}>
       {children}
     </FormSC>
   );
